@@ -1,0 +1,36 @@
+body {
+    background-color: #272727;
+}
+
+.juego-container {
+    position: absolute;
+    display: inline-block;
+    width: 380px; /* Ajusta el ancho según tus necesidades */
+    height: 220px; /* Ajusta el alto según tus necesidades */
+    overflow: hidden; /* Para ocultar el desbordamiento del video */
+    transition: transform 0.5s ease; /* Agrega una transición suave */
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.juego-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.juego-container:hover {
+    transform: scale(1.1); /* Escala el contenedor al hacer hover */
+    box-shadow: 0 0 10px white;
+}
+
+.juego-container img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

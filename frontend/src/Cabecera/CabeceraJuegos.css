@@ -1,0 +1,169 @@
+.cabeceraJuegos {
+    position: relative;
+    height: 1100px;
+    background-color: #272727;
+    font-family: Kanit;
+  }
+  
+  .fondo-container {
+    position: relative;
+    margin-top: 210px;
+  }
+
+  .fondo-imagen{
+    transition: opacity 0.5s ease;
+    max-width: 1920px;
+    max-height: 1080px;
+    width: 100%;
+    height: auto;
+  }
+
+  .botones-container {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical */
+    left: 0; /* Ajusta la posición horizontal */
+    right: 0;
+    text-align: center;
+  }
+  
+  .boton {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .boton-activo {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .boton-inactivo {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    margin: 0 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /*Estilos para el contenedor general del body de la página de inicio*/
+
+.generalBody{
+  color: white;
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-top: 20px;
+}
+
+.generalBody .tendencias{
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  font-family: Kanit;
+}
+
+  /* Estilos del texto */
+  .generalBody .tendencias{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+  }
+  
+  /* Estilo de la línea */
+  .generalBody .tendencias::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s;
+    transform: translateX(-50%);
+  }
+  
+  /* Animación al pasar el ratón */
+  .generalBody .tendencias:hover::after {
+    width: 100%;
+  }
+
+.flecha{
+  color: grey;
+  font-size: 20pt;
+}
+
+.generalBody .tendencias:hover .flecha{
+  color: white;
+}
+
+.carteleraJuegos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.miniCarteleras{
+    width: 380px;
+    height: 220px;
+    flex-basis: calc(33.33% - 20px);
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.juego{
+  margin-bottom: 20px;
+  font-family: Kanit;
+}
+
+.texto{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.precio{
+  margin-top: 0;
+  margin-right: 20px;
+  font-size: 15pt;
+  font-weight: 600;
+}
+
+.nombre{
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 13pt;
+}
+
+/*Aquí pondremos el descuento encima de la foto*/
+
+.contenedorImagen {
+  position: relative; /* Asegura que la posición de la etiqueta sea relativa a este contenedor */
+  display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
+}
+
+.etiquetaNaranja {
+  position: absolute;
+  width: 45px;
+  text-align: center;
+  bottom: 4px; /* Coloca la etiqueta en la parte inferior */
+  left: 0; /* Coloca la etiqueta en la parte izquierda */
+  background-color: #FF5400; /* Color de fondo de la etiqueta */
+  padding: 5px; /* Ajusta el relleno según sea necesario */
+  color: white; /* Color del texto */
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}

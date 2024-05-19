@@ -1,0 +1,278 @@
+.cabecera{
+  background-color: #272727;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Kanit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que la cabecera esté por encima del contenido */
+  width: 100%;
+}
+
+.cabecera div{
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 15pt;
+}
+
+.cabecera div img{
+  transition: transform 1s ease;
+  margin: 10px;
+}
+
+.cabecera div img:hover{
+  animation: moverIcono 1s ease;
+  box-shadow: 0 0 10px white;
+  border-radius: 60%;
+}
+
+@keyframes moverIcono{
+  from{
+    transform: rotateX(0deg);
+  }
+  to{
+    transform: rotateX(360deg);
+  }
+}
+
+/* Estilos del texto */
+.cabecera div h1 {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+/* Estilo de la línea */
+.cabecera div h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.3s;
+  transform: translateX(-50%);
+}
+
+/* Animación al pasar el ratón */
+.cabecera div h1:hover::after {
+  width: 100%;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.menu ul li{
+  display: inline;
+  margin-right: 80px;
+  font-size: 20pt;
+}
+
+/* Estilos del texto */
+.menu ul li {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+/* Estilo de la línea */
+.menu ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.3s;
+  transform: translateX(-50%);
+}
+
+/* Animación al pasar el ratón */
+.menu ul li:hover::after {
+  width: 100%;
+}
+
+.right-to-bracket, .user, .cart-shopping{
+  width: 30px;
+  height: 30px;
+}
+
+.registrarse, .login, .carrito{
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  white-space: nowrap;
+}
+
+.iconos .registrarse p,  .iconos .login p, .iconos .carrito p{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+/* Estilo de la línea */
+.iconos .registrarse p::after, .iconos .login p::after, .iconos .carrito p::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 5px;
+   background-color: white;
+  transition: width 0.3s;
+  transform: translateX(-50%);
+}
+
+/* Animación al pasar el ratón */
+.iconos .registrarse p:hover::after,  .iconos .login p:hover::after, .iconos .carrito p:hover::after {
+  width: 100%;
+}
+
+.iconos .registrarse:hover .right-to-bracket,
+.iconos .login:hover .user,
+.iconos .carrito:hover .cart-shopping {
+transform: scale(1.5); /* Ajusta el valor según el tamaño deseado */
+transition: transform 0.3s ease;
+color: orange;
+}
+
+/*Barra de búsqueda*/
+
+.buscar {
+  position: relative;
+  padding: 5px;
+}
+
+.buscar input {
+  width: 0;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #222;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s ease;
+}
+
+.btn {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: linear-gradient(to top, #FE7207, #FF4500);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.buscar:hover input {
+  width: 240px;
+}
+
+.buscar input:focus {
+  width: 240px;
+}
+
+.lupa{
+  margin: auto;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+/*Pie de página*/
+
+.footer{
+display: flex;
+justify-content: space-between;
+background-color: black;
+align-items: center;
+color: white;
+height: 150px;
+bottom: 0;
+left: 0;
+}
+
+.miniLogo{
+margin-right: 10px;
+width: 120px;
+border-radius: 50%;
+transition: box-shadow 0.5s ease;
+}
+
+.miniLogo:hover{
+box-shadow: 0 0 10px white;
+}
+
+.leftFooter a{
+margin-left: 20px;
+text-decoration: none;
+font-size: 14pt;
+position: relative;
+}
+
+
+.leftFooter a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+  transform: translateX(-50%);
+}
+
+.leftFooter a:hover::after {
+  width: 100%;
+}
+
+.rightFooter{
+display: flex;
+align-items: center;
+margin-right: 20px;
+}
+
+.rightFooter h2{
+text-decoration: none;
+position: relative;
+}
+
+.rightFooter h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 4px;
+  background-color: white;
+  transition: width 0.3s;
+  transform: translateX(-50%);
+}
+
+.rightFooter h2:hover::after {
+  width: 100%;
+}

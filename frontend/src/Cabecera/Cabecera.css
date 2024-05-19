@@ -1,0 +1,283 @@
+.cabecera{
+    background-color: #272727;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Kanit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+
+/* Estilo para la cabecera cuando se hace scroll */
+.cabecera.scroll {
+  background-color: black; /* Cambia al color negro cuando se hace scroll */
+  transition: background-color 0.3s; /* Agrega una transición suave */
+}
+
+/* Estilo para la cabecera cuando se vuelve a hacer scroll hacia arriba */
+.cabecera.scrolled {
+  background-color: #272727; /* Vuelve al color original cuando se hace scroll hacia arriba */
+  transition: background-color 0.3s; /* Agrega una transición suave */
+}
+  
+  .cabecera div{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15pt;
+  }
+  
+  .cabecera div img{
+    transition: transform 1s ease;
+    margin: 10px;
+  }
+  
+  .cabecera div img:hover{
+    animation: moverIcono 1s ease;
+    box-shadow: 0 0 10px white;
+    border-radius: 60%;
+  }
+  
+  @keyframes moverIcono{
+    from{
+      transform: rotateX(0deg);
+    }
+    to{
+      transform: rotateX(360deg);
+    }
+  }
+  
+  /* Estilos del texto */
+  .cabecera div h1 {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+  }
+  
+  /* Estilo de la línea */
+  .cabecera div h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s;
+    transform: translateX(-50%);
+  }
+  
+  /* Animación al pasar el ratón */
+  .cabecera div h1:hover::after {
+    width: 100%;
+  }
+
+  .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul{
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+  .menu ul li{
+    display: inline;
+    margin-right: 80px;
+    font-size: 20pt;
+  }
+
+  /* Estilos del texto */
+  .menu ul li {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+  }
+  
+  /* Estilo de la línea */
+  .menu ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s;
+    transform: translateX(-50%);
+  }
+  
+  /* Animación al pasar el ratón */
+  .menu ul li:hover::after {
+    width: 100%;
+  }
+
+  .right-to-bracket, .user, .cart-shopping{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .registrarse, .login, .carrito{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    white-space: nowrap;
+  }
+
+  .iconos .registrarse .texto,  .iconos .login .texto, .iconos .carrito .texto{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+
+/* Estilo de la línea */
+.iconos .registrarse .texto::after, .iconos .login .texto::after, .iconos .carrito .texto::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+     background-color: white;
+    transition: width 0.3s;
+    transform: translateX(-50%);
+}
+
+  /* Animación al pasar el ratón */
+  .iconos .registrarse .texto:hover::after,  .iconos .login .texto:hover::after, .iconos .carrito .texto:hover::after {
+    width: 100%;
+  }
+
+.iconos .registrarse:hover .right-to-bracket,
+.iconos .login:hover .user,
+.iconos .carrito:hover .cart-shopping {
+  transform: scale(1.5); /* Ajusta el valor según el tamaño deseado */
+  transition: transform 0.3s ease;
+  color: orange;
+  cursor: pointer;
+}
+
+/*Le quito el subrayado al texto afectado por la etiqueta "Link"*/
+
+.sin-subrayado{
+  text-decoration: none;
+}
+
+/*Barra de búsqueda*/
+
+.buscar {
+    position: relative;
+    padding: 5px;
+  }
+
+  .buscar .buscador {
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #222;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+  }
+  
+  .btn {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(to top, #FE7207, #FF4500);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .buscar:hover .buscador {
+    width: 240px;
+  }
+  
+  .buscar .buscador:focus {
+    width: 240px;
+  }
+
+.lupa{
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.lupa-container {
+  transition: all 0.3s ease;
+}
+
+.lupa-container.move {
+  transform: translateX(-100%);
+}
+
+h1.hide {
+  opacity: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.container.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.menu {
+  height: 100%;
+}
+
+.menu .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .container.center {
+  align-items: center;
+}
+
+.buscar.hide {
+  display: none;
+}
+
+.menu ul {
+  transition: transform 0.3s ease;
+  transform: translateY(40%);
+}
+
+.menu ul.scrolled-up {
+  transform: translateY(-20%);
+  transition: transform 0.3s ease;
+}
+
+
+
+
